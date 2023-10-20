@@ -23,10 +23,11 @@ end;
    //ExecutionContext.EstablishCopyOnWriteScope(ref executionContextSwitcher);
    // moveNext();
    st.MoveNext();
+   st.MoveNext();
    
   finally
   //executionContextSwitcher.Undo();
-  println('Builder.Start() is ended');
+  println('MainTask is ended');
   end;
  st.tbuilder.task := new MyTask();
  Result:= st.tbuilder.task;
@@ -35,7 +36,7 @@ end;
 begin
   var m := MainMethod();
   if (m <> nil) then
-  print(m.res)
+  println(m.res)
   else
-    print(m);
+    println(m);
 end.
